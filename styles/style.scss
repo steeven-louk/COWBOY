@@ -1,52 +1,50 @@
-:root{
-    --main-text-color: #fff;
+:root {
+    --main-text-color  : #fff;
     --second-text-color: #35B73A;
 }
 
 
-body{
-    height: 100vh;
-    width: 100%;
-    outline: none;
+body {
+    height  : 100vh;
+    width   : 100%;
+    outline : none;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
-    color: var(--main-text-color);
+    margin  : 0;
+    padding : 0;
+    color   : var(--main-text-color);
 }
 
 
-header{
-  
-    position: relative;
-    padding: 20px;
-    top: 0;
-    background: rgba(0,0,0 ,1);
+header {
 
-    padding-bottom: 25px;
+    position  : relative;
+    padding   : 20px;
+    top       : 0;
+    background: rgba(0, 0, 0, 1);
 
-    .navbar{
+    padding-bottom: 10px;
 
-      position: absolute;
-      top: 0;
-      width: 100%;
-    
-        
-        display: flex;
+    .navbar {
+
+        position: absolute;
+        top     : 0;
+        width   : 100%;
+        display        : flex;
         justify-content: space-between;
 
-        .nav-brand{
+        .nav-brand {
             text-transform: uppercase;
-            font-weight: bold;
+            font-weight   : bold;
         }
 
         &__nav {
-            display: flex;
+            display        : flex;
             justify-content: space-evenly;
-           // width: 100%;
+            // width: 100%;
 
-            .nav-item{
+            .nav-item {
                 list-style: none;
-               
+
                 text-transform: capitalize;
             }
         }
@@ -56,64 +54,108 @@ header{
 
 }
 
-.container{
+.container {
 
     display: flex;
-    width: 100%;
-    height: 100%;
+    width  : 100%;
+    height : 100vh;
 
-        .left{
-            flex: 1;
-            justify-content: center;
-            align-items: center;
-            background-color: #0B0E10;
-            font-weight: bold;
+    .left {
+        flex               : 1;
+        background-color   : #0B0E10;
+        font-weight        : bold;
+        position           : relative;
 
-            .title{
-                font-weight: bold;
 
-                
-                h2{
-                  font-size: 80px;
-            }
+        &__title__container {
+            width : 480px;
+            margin: auto;
 
-            span{
-                font-size: 50px;
-                color: var(--second-text-color);
-            }
+            .title {
+                //   display: flex;
+                font-weight  : bold;
+                margin-bottom: -30px;
+
+                p {
+                    font-size: 55px;
                 }
 
-                .description{
+                span {
+                    font-size: 30px;
+                    color    : var(--second-text-color);
+                }
+            }
 
-                    p{
-                        font-size: 20px;
+            .description {
+                padding: 0;
 
-                        span{
-                            color: var(--main-text-color);
-                        }
-                        color: rgba(255, 255, 255, 0.493);
+                p {
+                    font-size: 20px;
+
+                    span {
+                        color: var(--main-text-color);
                     }
 
-                    .button{
-                        display: flex;
-                        flex-direction: row;
-                        align-items: baseline;
+                    color: rgba(255, 255, 255, 0.493);
+                }
 
-                        button{
-                            padding: 15px;
-                            background: var(--second-text-color);
-                            color: var(--main-text-color);
-                            border-radius: 10px;
-                            margin-right: 25px;
+                .button {
+                    display       : flex;
+                    flex-direction: row;
+                    align-items   : baseline;
 
-                        }
+                    button {
+                        padding      : 15px;
+                        background   : var(--second-text-color);
+                        color        : var(--main-text-color);
+                        border-radius: 10px;
+                        margin-right : 25px;
+                        outline      : none;
+
                     }
                 }
+            }
+
         }
 
-        .right{
-            flex: 1;
-            background-color: rgba(41, 43, 41, 0.933);
+        .bottom {
+            display        : flex;
+            position       : absolute;
+            bottom         : 26px;
+            width          : 100%;
+            justify-content: space-between;
+
+            .img-container {
+
+                img {
+                    width     : 300px;
+                    object-fit: cover;
+                }
+            }
+
+            .list {
+                //display: flex;
+                //justify-content: flex-end;
+                position: inherit;
+                bottom  : 50px;
+                right   : 10px;
+                display : flex;
+
+                img {
+                    margin-left: 37px;
+                    width      : 4.8em;
+                }
+
+            }
         }
+    }
+
+
+    .right {
+        flex            : 1;
+        background-color: rgba(41, 43, 41, 0.933);
+
+        
+    }
 
 }
