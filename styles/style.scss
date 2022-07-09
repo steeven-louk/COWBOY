@@ -23,16 +23,13 @@ header {
     z-index: 1;
     width: 100%;
     color: #fff;
-    background: rgba(0, 0, 0, 0);
     padding: 0 2em;
 
-   // padding-bottom: 10px;
 
     .navbar {
 
         position: relative;
         padding-top: 20px;
-        //top     : 0;
         width   : 100%;
         display        : flex;
         justify-content: space-between;
@@ -69,6 +66,10 @@ header {
                 text-transform: capitalize;
                 margin-left: 2rem;
                 font-size: 20px;
+
+                &:hover{
+                    color: var(--second-text-color);
+                }
                 
             }
         }
@@ -144,6 +145,11 @@ header {
 
         }
 
+        .blur{
+            -webkit-box-shadow: 1px 5px 16px 15px var(--second-text-color); 
+box-shadow: 1px 10px 16px 18px  var(--second-text-color);
+        }
+
         .bottom {
             display        : flex;
             position       : absolute;
@@ -151,13 +157,16 @@ header {
             width          : 100%;
             justify-content: space-between;
 
+           
             .img-container {
-
+               
                 img {
+                   //box-shadow: 26px -17px 21px 23px rgba(53,183,58,0.65); 
+                   // background-color: transparent;
                     width     : 300px;
-                    object-fit: cover;
+                    background-clip: border-box;
                 }
-            }
+          }
 
             .list {
                 //display: flex;
@@ -178,6 +187,7 @@ header {
 
 
     .right {
+
         flex            : 1;
         background-color: #1e1e1e;
         height: 100vh;
@@ -246,6 +256,7 @@ header {
 
 
     .center_icon{
+        
         z-index: 5;
         position: absolute;
         left: 46.2%;
